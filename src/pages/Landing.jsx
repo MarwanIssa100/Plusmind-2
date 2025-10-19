@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Users, Shield, MessageCircle } from 'lucide-react';
+import { Heart, Users, Shield, MessageCircle, Brain } from 'lucide-react';
 
 const Landing = () => {
   return (
@@ -10,23 +10,38 @@ const Landing = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-3">
-              <div className="bg-blue-100 p-2 rounded-lg">
-                <Heart className="h-6 w-6 text-blue-600" />
+              <div className="bg-white p-2 rounded-lg inline-flex items-center justify-center">
+                <Brain className="w-[40px] h-[40px] text-[#27CAB5] logo-brain" />
               </div>
-              <h1 className="text-xl font-bold text-gray-900">MindCare Connect</h1>
+
+              <h1 className="text-xl font-bold text-gray-900">PLUSEMIND</h1>
             </div>
             <div className="flex items-center space-x-4">
               <Link
-                to="/login"
+                to="/contact"
                 className="text-gray-600 hover:text-gray-900 font-medium transition-colors"
               >
-                Sign In
+                Contact
+              </Link>
+
+              <Link
+                to="/about"
+                className="text-gray-600 hover:text-gray-900 font-medium transition-colors"
+              >
+                About
+              </Link>
+
+              <Link
+                to="/test"
+                className="text-gray-600 hover:text-gray-900 font-medium transition-colors"
+              >
+                Test
               </Link>
               <Link
-                to="/register"
+                to="/login"
                 className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
               >
-                Get Started
+                Login
               </Link>
             </div>
           </div>
@@ -34,16 +49,16 @@ const Landing = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-20 pb-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section
+        className="pt-20 pb-32 bg-contain bg-no-repeat bg-center min-h-screen flex items-center justify-center"
+        style={{ backgroundImage: "url('/images/military-man-suffering-from-ptsd-having-psychologist-session 1.png')" }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center  backdrop-blur-sm rounded-lg p-8">
           <h1 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Your Mental Health
-            <br />
-            <span className="text-blue-600">Journey Starts Here</span>
+            Feel Better, one step at time
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Connect with licensed therapists, share your story, and find support in a safe, 
-            confidential community dedicated to mental wellness.
+          access therapy, self care tool, and 7/24 support in a safe, judgment-fee space. 
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <Link
@@ -61,6 +76,7 @@ const Landing = () => {
           </div>
         </div>
       </section>
+
 
       {/* Features Section */}
       <section className="py-20 bg-white">
